@@ -1,0 +1,6 @@
+if SHIELD_JIMPAD_V1
+
+config ZMK_KEYBOARD_NAME
+    default "jimpad"
+
+endif # SHIELD_JIMPAD_V1
