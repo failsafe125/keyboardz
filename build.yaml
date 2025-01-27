@@ -19,7 +19,7 @@
 # board: seeed_nrf52840_mdk
 # shield: jimpad_v1
 ---
-include:
-    -board: seeeduino_xiao_ble
-     shield: jimpad_v1
+boards:
+  - name: seeeduino_xiao_ble
+    shield: jimpad_v1
 
