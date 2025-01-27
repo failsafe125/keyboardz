@@ -1,15 +1,14 @@
 manifest:
-  version: "0.7"
-
   remotes:
-    - name: zmkfirmware
+    - name: zmk
       url-base: https://github.com/zmkfirmware
-
   projects:
     - name: zmk
-      repo-path: zmk
+      remote: zmk
       revision: main
-      path: app
-
+    - name: jimpad_v1
+      remote: zmk
+      path: boards/shields/jimpad_v1  # Set the path to your board definition files
+      revision: main
   self:
-    path: app
+    path: zmk
