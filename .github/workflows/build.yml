@@ -1,6 +1,24 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+
+on: [push, pull_request]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up environment
+        run: |
+          sudo apt-get install -y cmake ninja-build python3-pip
+          pip3 install west
+          west init -l app
+          west update
+
+      - name: Build firmware
+        run: |
+          west build -b <your_board> app
+        env:
+          BOARD: jimpad_v1
