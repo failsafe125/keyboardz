@@ -1,2 +1,3 @@
 config SHIELD_JIMPAD_V1
-    def_bool $(shields_list_contains,jimpad_v1)
+    bool "Seeed nRF52840 Custom Shield"
+    select ZMK_KEYBOARD

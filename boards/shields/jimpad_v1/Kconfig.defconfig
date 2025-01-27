@@ -3,4 +3,13 @@ if SHIELD_JIMPAD_V1
 config ZMK_KEYBOARD_NAME
     default "jimpad"
 
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
+
+config ZMK_KEYSCAN_POLLING_INTERVAL
+    default 10
+
 endif # SHIELD_JIMPAD_V1
